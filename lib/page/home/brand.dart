@@ -6,7 +6,7 @@ import 'package:mall/utils/navigator_util.dart';
 import 'package:mall/widgets/cached_image.dart';
 
 class BrandView extends StatefulWidget {
-  List<BrandList> brands;
+  final List<BrandList> brands;
 
   BrandView(this.brands);
 

@@ -5,8 +5,8 @@ import 'package:mall/event/cart_number_event.dart';
 typedef OnNumberChange(int number);
 
 class CartNumberView extends StatefulWidget {
-  OnNumberChange onNumberChange;
-  var _number;
+  final OnNumberChange onNumberChange;
+  final _number;
 
   CartNumberView(this._number, this.onNumberChange);
 

@@ -7,13 +7,12 @@ import 'package:mall/constant/string.dart';
 import 'package:mall/widgets/cached_image.dart';
 
 class CategoryMenu extends StatelessWidget {
-  List<Channel> categoryList;
+  final List<Channel> categoryList;
 
   CategoryMenu(this.categoryList);
 
   _goCategoryView(BuildContext context, Channel channel) {
-    NavigatorUtils.goCategoryGoodsListPage(
-        context, channel.name, channel.id);
+    NavigatorUtils.goCategoryGoodsListPage(context, channel.name, channel.id);
   }
 
   @override

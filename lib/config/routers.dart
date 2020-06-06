@@ -26,6 +26,7 @@ class Routers {
 
   static void configureRoutes(Router router) {
     router.notFoundHandler = Handler(handlerFunc:
+        // ignore: missing_return
         (BuildContext context, Map<String, List<String>> parameters) {
       print("handler not find");
     });
