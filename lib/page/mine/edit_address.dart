@@ -9,7 +9,7 @@ import 'package:dio/dio.dart';
 import 'package:mall/utils/toast_util.dart';
 
 class EditAddressView extends StatefulWidget {
-  var addressId;
+  final addressId;
 
   EditAddressView(this.addressId);
 

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class WebViewPage extends StatelessWidget {
-  var bannerDetailUrl;
-  var bannerName;
+  final bannerDetailUrl;
+  final bannerName;
 
   WebViewPage(this.bannerDetailUrl, this.bannerName);
 

@@ -27,11 +27,10 @@ class HomeService {
         BannerListEntity bannerListEntity =
             BannerListEntity.fromJson(responseList);
         onSuccessList(bannerListEntity.bannerEntitys);
-      } else {
+      } else
         onFail(response['errmsg']);
-      }
     } catch (e) {
-      print(e);
+      print("Here it is" + e);
       onFail(Strings.SERVER_EXCEPTION);
     }
   }
@@ -162,8 +161,8 @@ class HomeService {
   Future receiveCoupon(Map<String, dynamic> parameters, OnSuccess onSuccess,
       OnFail onFail) async {
     try {
-      var response =
-          await HttpUtil.instance.post(Api.RECEIVE_COUPON, parameters: parameters);
+      var response = await HttpUtil.instance
+          .post(Api.RECEIVE_COUPON, parameters: parameters);
       if (response['errno'] == 0) {
         onSuccess(Strings.SUCCESS);
       } else {

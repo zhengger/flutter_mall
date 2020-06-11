@@ -22,6 +22,8 @@ import 'package:mall/page/goods/project_selection_detail.dart';
 import 'package:mall/widgets/webview.dart';
 import 'package:mall/utils/fluro_convert_utils.dart';
 import 'package:mall/page/home/brand_detail.dart';
+import 'package:mall/page/wallet/cardsview.dart';
+
 var homeHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> parameters) {
   return MallMainView();
@@ -60,7 +62,7 @@ var goodsDetailsHandler = Handler(
 
 var fillInOrderHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> parameters) {
-      var cartId=int.parse(parameters["cartId"].first);
+  var cartId = int.parse(parameters["cartId"].first);
   return FillInOrderView(cartId);
 });
 
@@ -127,7 +129,13 @@ var webViewHandler = Handler(
 
 var brandDetailHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> parameters) {
-      var titleName = FluroConvertUtil.fluroCnParamsDecode(parameters["titleName"].first);
-      var id = parameters["id"].first;
-      return BrandDetailView(titleName, id);
-    });
+  var titleName =
+      FluroConvertUtil.fluroCnParamsDecode(parameters["titleName"].first);
+  var id = parameters["id"].first;
+  return BrandDetailView(titleName, id);
+});
+
+var cardsViewHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> parameters) {
+  return CardsView();
+});

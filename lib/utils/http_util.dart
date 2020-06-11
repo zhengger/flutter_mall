@@ -20,8 +20,8 @@ class HttpUtil {
 
   HttpUtil() {
     BaseOptions options = BaseOptions(
-      connectTimeout: 5000,
-      receiveTimeout: 5000,
+      connectTimeout: 10000,
+      receiveTimeout: 10000,
     );
     dio = new Dio(options);
     dio.interceptors

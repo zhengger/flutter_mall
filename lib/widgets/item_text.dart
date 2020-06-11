@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ItemTextView extends StatelessWidget {
-  var leftText;
-  var rightText;
-  VoidCallback callback;
+  final leftText;
+  final rightText;
+  final VoidCallback callback;
 
   ItemTextView(this.leftText, this.rightText, {this.callback});
 

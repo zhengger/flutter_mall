@@ -7,9 +7,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mall/widgets/cached_image.dart';
 
 class SwiperView extends StatelessWidget {
-  List<MallBanner> bannerData = new List();
-  int size;
-  double viewHeight;
+  final List<MallBanner> bannerData;
+  final int size;
+  final double viewHeight;
 
   SwiperView(this.bannerData, this.size, this.viewHeight);
 
@@ -40,8 +40,11 @@ class SwiperView extends StatelessWidget {
               autoplay: false,
               itemBuilder: (BuildContext buildContext, int index) {
                 print(bannerData[index].url);
-                return CachedImageView(
-                    double.infinity, double.infinity, bannerData[index].url);
+                return ClipRRect(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: CachedImageView(
+                      double.infinity, double.infinity, bannerData[index].url),
+                );
               },
               duration: 10000,
               pagination: SwiperPagination(

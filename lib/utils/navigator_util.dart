@@ -42,8 +42,9 @@ class NavigatorUtils {
     Application.router.pop(context);
   }
 
-  static goFillInOrder(BuildContext context,int cartId) {
-    Application.router.navigateTo(context, Routers.fillInOrder+"?cartId=$cartId",
+  static goFillInOrder(BuildContext context, int cartId) {
+    Application.router.navigateTo(
+        context, Routers.fillInOrder + "?cartId=$cartId",
         transition: TransitionType.inFromRight);
   }
 
@@ -126,5 +127,10 @@ class NavigatorUtils {
     Application.router.navigateTo(
         context, Routers.brandDetail + "?titleName=$title&id=$id",
         transition: TransitionType.inFromRight);
+  }
+
+  static goCardsView(BuildContext context) {
+    Application.router.navigateTo(context, Routers.cardsView,
+        transition: TransitionType.inFromRight, replace: false);
   }
 }

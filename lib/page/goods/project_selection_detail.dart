@@ -4,7 +4,6 @@ import 'package:mall/service/goods_service.dart';
 import 'package:mall/widgets/futurebuilder_widget.dart';
 import "package:flutter_html/flutter_html.dart";
 import 'package:mall/constant/string.dart';
-import 'package:mall/utils/toast_util.dart';
 import 'package:mall/widgets/loading_dialog.dart';
 import 'package:mall/widgets/network_error.dart';
 import 'package:mall/entity/project_selection_recommed_entity.dart';
@@ -13,7 +12,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mall/widgets/cached_image.dart';
 
 class ProjectSelectionDetailView extends StatefulWidget {
-  int id;
+  final int id;
 
   ProjectSelectionDetailView(this.id);
 

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FutureBuilderWidget extends StatefulWidget {
-  Future future;
-  Widget loadingWidget;
-  Widget errorWidget;
-  Widget resultWidget;
+  final Future future;
+  final Widget loadingWidget;
+  final Widget errorWidget;
+  final Widget resultWidget;
 
   FutureBuilderWidget(
       this.future, this.loadingWidget, this.errorWidget, this.resultWidget);
@@ -18,6 +18,7 @@ class _FutureBuilderWidgetState extends State<FutureBuilderWidget> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: widget.future,
+      // ignore: missing_return
       builder: (BuildContext context, AsyncSnapshot asyncSnapshot) {
         switch (asyncSnapshot.connectionState) {
           case ConnectionState.none:

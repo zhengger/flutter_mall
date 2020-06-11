@@ -7,8 +7,8 @@ import 'package:mall/widgets/empty_view.dart';
 import 'package:mall/widgets/cached_image.dart';
 
 class BrandDetailView extends StatefulWidget {
-  var titleName;
-  var id;
+  final titleName;
+  final id;
 
   BrandDetailView(this.titleName, this.id);
 
@@ -22,6 +22,7 @@ class _BrandDetailViewState extends State<BrandDetailView> {
 
   @override
   void initState() {
+    super.initState();
     _getData();
   }
 

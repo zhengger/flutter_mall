@@ -5,7 +5,7 @@ import 'package:mall/widgets/cached_image.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductView extends StatelessWidget {
-  List<Goods> productList;
+  final List<Goods> productList;
 
   ProductView(this.productList);
 

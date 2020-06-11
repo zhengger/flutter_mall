@@ -7,7 +7,7 @@ import 'package:mall/utils/toast_util.dart';
 import 'package:mall/utils/shared_preferences_util.dart';
 
 class CouponView extends StatelessWidget {
-  List<CouponList> couponList;
+  final List<CouponList> couponList;
 
   CouponView(this.couponList);
 

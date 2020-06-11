@@ -70,7 +70,7 @@ class _CartNumberViewState extends State<CartNumberView> {
                     top: BorderSide(color: Colors.grey, width: 1.0),
                     bottom: BorderSide(color: Colors.grey, width: 1.0))),
             child: Text(
-              "${goodsNumber}",
+              "$goodsNumber",
               style: TextStyle(
                   color: Colors.black54,
                   fontSize: ScreenUtil.instance.setSp(26.0)),
@@ -114,7 +114,7 @@ class _CartNumberViewState extends State<CartNumberView> {
     setState(() {
       goodsNumber = goodsNumber + 1;
     });
-    print("${goodsNumber}");
+    print("$goodsNumber");
     onNumberChange(goodsNumber);
   }
 }

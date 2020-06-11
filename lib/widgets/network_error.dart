@@ -3,7 +3,7 @@ import 'package:mall/constant/string.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NetWorkErrorView extends StatelessWidget {
-  VoidCallback callback;
+  final VoidCallback callback;
 
   NetWorkErrorView(this.callback);
 

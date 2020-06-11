@@ -90,9 +90,11 @@ class _MineViewState extends State<MineView> {
                         child: CircleAvatar(
                           radius: ScreenUtil.getInstance().setWidth(50),
                           foregroundColor: Colors.deepOrangeAccent,
-                          backgroundImage: NetworkImage(
-                            imageHeadUrl,
-                          ),
+                          //! BUG NetworkImage null
+                          // backgroundImage: NetworkImage(imageHeadUrl) ??
+                          //     AssetImage("images/no_data.png"),
+                          backgroundImage: NetworkImage(imageHeadUrl),
+                          // backgroundImage: AssetImage("images/cat"),
                         ),
                       ),
                       Padding(
@@ -111,7 +113,9 @@ class _MineViewState extends State<MineView> {
                             child: Offstage(
                               offstage: !isLogin,
                               child: Container(
-                                padding: EdgeInsets.only(right: ScreenUtil.getInstance().setWidth(30)),
+                                padding: EdgeInsets.only(
+                                    right:
+                                        ScreenUtil.getInstance().setWidth(30)),
                                 alignment: Alignment.centerRight,
                                 child: Text(
                                   Strings.LOGIN_OUT,

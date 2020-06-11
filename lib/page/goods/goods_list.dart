@@ -7,7 +7,7 @@ import 'package:mall/widgets/cached_image.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GoodsList extends StatefulWidget {
-  int categoryId;
+  final int categoryId;
 
   GoodsList(this.categoryId);
 
